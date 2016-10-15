@@ -1,0 +1,13 @@
+<h1>List of all <%= @users.count %> Users </h1>
+
+
+<% @users.each do |user| %>
+  <%= user.name %>
+  <%= user.age %>
+  <%= user.city %>
+  <%= user.state %>
+  <%= user.cell %>
+<% end %><br><br>
+
+<% a = @users.find_by_name("Vijay") %>
+<%= a.cell %>
