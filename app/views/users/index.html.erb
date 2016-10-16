@@ -1,0 +1,13 @@
+<h1>List of all <%= @users.count %> Users </h1>
+
+
+<% @users.each do |user| %>
+  <%= user.name %>
+  <%= link_to "Edit", {controller: 'users', action: 'edit', id: user.id }%><br>
+  <%= user.age %><br>
+  <%= user.city %><br>
+  <%= user.state %><br>
+  <%= user.cell %><br>
+<% end %>
+
+<%= link_to "New User Registration", { controller: 'users', action: 'new' } %>
