@@ -4,6 +4,7 @@
 <% @users.each do |user| %>
   <%= user.name %>
   <%= link_to "Edit", {controller: 'users', action: 'edit', id: user.id }%><br>
+  <%= link_to "Delete", {controller: 'users', action: 'destroy', id: user.id}, method: 'delete' %><br>
   <%= user.age %><br>
   <%= user.city %><br>
   <%= user.state %><br>
