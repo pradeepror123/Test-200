@@ -1,6 +1,15 @@
-<h1>New User Page</h1>
+<h1 id='name'>New User Page</h1>
 <hr>
 <%= form_for @user do |f| %>
   Name: <%= f.text_field :name %><br/><br/>
   <%= f.submit %>
+  <script>
+    window.alert("Let's create a User");
+  </script>
 <% end %>
+
+<p id='succesful' style="display:none"> successfully created!</p>
+
+<button type="submit" onclick="document.getElementById('name').style.fontSize='100px',
+ document.getElementById('succesful').style.display='block'">
+  Click ME</button>
